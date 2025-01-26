@@ -18,7 +18,7 @@ public class MemberService {
 
     //회원가입
     @Transactional
-    private Long join(Member member){
+    public Long join(Member member){
         validateDuplicateMember(member);
         memberRepository.save(member);
         return member.getId();
