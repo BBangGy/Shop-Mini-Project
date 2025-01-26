@@ -1,6 +1,8 @@
 package jpabook.japshop;
 
 import jakarta.annotation.security.RunAs;
+import jpabook.japshop.domain.Member;
+import jpabook.japshop.repository.MemberRepository;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +14,8 @@ import org.springframework.transaction.annotation.Transactional;
 import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest
 class MemberRepositoryTest {
-    @Autowired MemberRepository memberRepository;
+    @Autowired
+    MemberRepository memberRepository;
     @Test
     @Transactional//test가 끝나고 db를 롤백하기 위함이다.
     @Rollback(false) //testcase에 rollback을 넣으면 transacion을 다 실행하지 않고 끝
