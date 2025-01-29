@@ -14,6 +14,7 @@ import java.util.List;
 @DiscriminatorColumn(name = "dtype")
 //구분 컬럼 이름을 dytpe으로 지정
 @Getter
+@Setter
 public abstract class Item {
     @GeneratedValue
     @Id
